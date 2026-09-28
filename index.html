@@ -1,1 +1,180 @@
-PS4 [5.05] 7.00 - 13.52 FW GoldHEN Host by Matrix - 01125006655
+PS4 Exploit Host Source Code
+Below is the complete, self-contained index.html source code for the PS4 Exploit Host interface. It includes integrated CSS styling, JavaScript offline cache management, payload execution stubs, and all requested navigation targets.<!DOCTYPE html>
+
+<html lang="en" manifest="cache.appcache">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PS4 Exploit Host by MATRIX</title>
+
+    <style>
+
+        :root {
+
+            --bg-color: #0d1117;
+
+            --card-bg: #161b22;
+
+            --accent-blue: #2f81f7;
+
+            --accent-gold: #d29922;
+
+            --accent-green: #238636;
+
+            --accent-red: #da3633;
+
+            --text-main: #c9d1d9;
+
+            --text-heading: #f0f6fc;
+
+            --border-color: #30363d;
+
+            --hover-brightness: 1.2;
+
+        }
+
+        * {
+
+            box-sizing: border-box;
+
+            margin: 0;
+
+            padding: 0;
+
+            user-select: none;
+
+            -webkit-user-select: none;
+
+        }
+
+        body {
+
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+            background-color: var(--bg-color);
+
+            color: var(--text-main);
+
+            display: flex;
+
+            flex-direction: column;
+
+            min-height: 100vh;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 20px;
+
+        }
+
+        header {
+
+            text-align: center;
+
+            margin-top: 20px;
+
+            margin-bottom: 30px;
+
+        }
+
+        h1 {
+
+            color: var(--text-heading);
+
+            font-size: 2.2rem;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            text-shadow: 0 0 10px rgba(47, 129, 247, 0.5);
+
+            margin-bottom: 8px;
+
+        }
+
+        .status-bar {
+
+            font-size: 0.95rem;
+
+            color: #8b949e;
+
+            background: var(--card-bg);
+
+            padding: 8px 16px;
+
+            border-radius: 20px;
+
+            border: 1px solid var(--border-color);
+
+            display: inline-block;
+
+        }
+
+        .main-container {
+
+            width: 100%;
+
+            max-width: 900px;
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+            gap: 16px;
+
+            padding: 10px;
+
+        }
+
+        .btn {
+
+            background-color: var(--card-bg);
+
+            color: var(--text-heading);
+
+            border: 1px solid var(--border-color);
+
+            padding: 18px 20px;
+
+            font-size: 1rem;
+
+            font-weight: 600;
+
+            border-radius: 8px;
+
+            cursor: pointer;
+
+            transition: all 0.2s ease-in-out;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+            text-decoration: none;
+
+        }
+
+        .btn:hover, .btn:focus {
+
+            outline: none;
+
+            border-color: var(--accent-blue);
+
+            transform: translateY(-2px);
+
+            box-shadow: 0 6px 12px rgba(47, 129, 247, 0.2);
